@@ -34,7 +34,7 @@ export class SigninComponent implements OnInit{
 
   redirectToHome(){
     if(this.tokenData != null){
-       this.router.navigate(['/home']);
+       this.router.navigate(['/smc/home']);
     }
   }
 
