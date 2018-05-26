@@ -1,0 +1,22 @@
+nav.navbar.navbar-static-top {
+    background-color: #00599c;
+}
+img {
+    height: 50px;
+}
+
+.cicloactual{
+    border-radius: 38px;
+    border: 1px solid #0FB066 !important;
+    padding: 8px 10px !important;
+    margin-top: 12px;
+    text-transform: capitalize !important;
+    width: fit-content;
+    color: white;
+    font-size: large;
+    margin-left: inherit;
+    margin-right: inherit;
+}
+
+
+

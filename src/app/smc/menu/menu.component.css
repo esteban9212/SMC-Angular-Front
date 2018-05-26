@@ -1,0 +1,135 @@
+.bg-light {
+    background-color: #00599C!important;
+     color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+        font-size: x-large;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+
+}
+
+*, ::after, ::before {
+     box-sizing: none;
+}
+
+a.nav-link:hover {
+    background: #004E9B ;
+}
+a.linkFooter {
+    font-size: initial;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    margin-right: 15px;
+}
+
+
+
+
+a.nav-link:focus {
+
+    text-decoration: underline;
+}
+div>ul>li>h5 {
+    margin-top: 15px;
+}
+
+li.nav-item.active {
+
+    border-radius: 5px;
+    border: 2px solid white !important;
+    color: #00599c !important;
+    height: 72px;
+
+
+}
+#navbarSupportedContent ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+#navbarSupportedContent ul li
+{
+    list-style-type: none;
+    display: inline;
+}
+
+.cicloactual{
+          border-radius: 38px;
+    border: 1px solid #0FB066 !important;
+    padding: 8px 10px !important;
+    margin-top: 12px;
+    text-transform: capitalize !important;
+        margin-right: 5px;
+}
+
+.itemMenu{
+
+    padding: 8px 10px !important;
+    margin-top: 12px;
+    text-transform: capitalize !important;
+}
+
+nav.fixed-top.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-default {
+    padding-bottom: 0px;
+    border-top-width: 0px;
+    padding-top: 0px;
+}
+
+a.nav-link {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.azul{
+    background: #00599c;
+    width: -webkit-fill-available;
+}
+.nombre{
+    color: white;
+}
+.option{
+list-style:none
+}
+
+.nada{
+    text-decoration: none !important;
+}
+
+
+h5  {
+    margin-top: 0px !important;
+    margin-bottom: 5px;
+}
+
+footer.page-footer.font-small.blue.pt-4.mt-4.bg-light {
+    padding-top: 5px !important;
+}
+
+h3  {
+    margin-top: 0px !important;
+    margin-bottom: 0px;
+}
+
+.footer-copyright.py-3.text-center {
+    padding-top: 0px !important;
+    padding-bottom: 2px !important;
+}
+
+.col-md-6 {
+    height: 137px;
+}
+
+
+
+
