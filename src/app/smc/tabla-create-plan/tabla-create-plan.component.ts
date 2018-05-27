@@ -104,8 +104,8 @@ export class TablaCreatePlanComponent implements OnInit {
     let idplan:number;
     idplan=event.data.Idplan;
 
-    window.open('/smc/search/'+idplan); 
-     // this.router.navigate(['/search/'+idplan]);
+   // window.open('/smc/search/'+idplan); 
+     this.router.navigate(['/smc/search/'+idplan]);
   }
 
 }

@@ -14,11 +14,14 @@
 .componenteCrearPlan{
 
     display: inline-flex;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 20px;
     text-align: initial;
+        padding-right: 20px;
 }
-
+section.content {
+    padding-bottom: 0px;
+}
 .padre{
 	text-align: center;
 }
@@ -54,4 +57,8 @@ h4 {
 }
 section.content-header.titulo {
     margin-top: 0px;
+}
+
+form.ng-untouched.ng-pristine.ng-valid {
+    margin-bottom: 10px;
 }

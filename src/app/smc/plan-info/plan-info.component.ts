@@ -6,6 +6,7 @@ import { CDIOyPI } from '../../models/cdiobypi';
 import { PlanAssessmentService } from '../../services/plan-assessment.service';
 import { Observable } from 'rxjs/Rx';
 import { PlanAssessment } from '../../models/planAssessment';
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -30,7 +31,7 @@ export class PlanInfoComponent implements OnInit {
 	columns: string[];
 
 
-	constructor(private planAssessmentService:PlanAssessmentService) { 
+	constructor(private planAssessmentService:PlanAssessmentService,private router: Router) { 
 
 
 	}
@@ -67,8 +68,8 @@ export class PlanInfoComponent implements OnInit {
 
 		editRow(pi:Pi){
 
-    			window.open('/smc/edit/'+this.idPlan+'/'+pi.Idpi); 
-
+    		//	window.open('/smc/edit/'+this.idPlan+'/'+pi.Idpi); 
+ this.router.navigate(['/smc/edit/'+this.idPlan+'/'+pi.Idpi]);
 		}
 
 		
