@@ -34,4 +34,11 @@ h1.text-center.h1 {
      border-top: 3px solid #3c8dbc;
     margin-top: 10px;
 }
+section.content-header.titulo {
+    margin-top: 0px;
+}
+
+.titulo {
+	 margin-top: 0px;
+}
 
