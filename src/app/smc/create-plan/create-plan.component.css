@@ -24,6 +24,7 @@ section.content {
 }
 .padre{
 	text-align: center;
+    margin-top: 10px;
 }
 
 .boton{
@@ -68,4 +69,8 @@ div {
 }
 table-cell-view-mode {
     font-size: small !important;
+}
+
+.input-group.mb-3 {
+    width: -webkit-fill-available;
 }

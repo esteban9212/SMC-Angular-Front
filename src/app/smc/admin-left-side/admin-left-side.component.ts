@@ -23,7 +23,7 @@ export class AdminLeftSideComponent implements OnInit {
       if(idUser == "5000"){
       this.foto = "https://conf.researchr.org/getProfileImage/norhavillegas/6b2f298e-31de-44b1-bce8-74e0ada75502/small.jpg?1507858768000";
        }else{
-        this.foto= "https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-256.png"
+        this.foto= "https://qualiscare.com/wp-content/uploads/2017/08/default-user.png";
        }
     }
   }

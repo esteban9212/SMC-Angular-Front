@@ -36,7 +36,8 @@ export class AssignLeaderComponent implements OnInit {
 	outcomes:Outcome[];
 
 
-
+newOutcomeObservable:Observable<Outcome>;
+newOutcome:Outcome;
 
 	programSelected:any;
 	outcomeSelected:any;
@@ -146,8 +147,18 @@ export class AssignLeaderComponent implements OnInit {
 		console.log(this.outcomeSelected);
 		console.log(this.userId);
 
-     window.location.reload();
-	}
+    if(this.programSelected && this.outcomeSelected && this.userId){
+    this.newOutcomeObservable =  this.outcomeService.changeLeaderOutcome(this.outcomeSelected,this.userId);
+
+    this.newOutcomeObservable.subscribe((data)=> {
+          this.newOutcome = data;
+      });
+window.location.reload();
+  }else{
+    console.log("nada");
+    }
+  }
+
 
   onUserRowSelect(event): void {
     console.log(event);

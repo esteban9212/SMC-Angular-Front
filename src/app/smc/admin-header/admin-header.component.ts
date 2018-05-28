@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
 export class AdminHeaderComponent implements OnInit {
 
 	nameUser : string;
-	foto : string = "https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-256.png";
+	foto : string = "https://qualiscare.com/wp-content/uploads/2017/08/default-user.png";
 
 	constructor(private authService: AuthService, private router: Router) { }
 

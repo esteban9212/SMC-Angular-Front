@@ -28,4 +28,10 @@ export class OutcomeService {
 	getOutcomesActiveByProgram(idProgram):Observable<Outcome[]>{
 		return this.http.get('http://127.0.0.1:8000/api/outcomesByCycleActiveByProgram/'+idProgram).map((response:Response)=> response.json());
 	}
+
+
+	changeLeaderOutcome(idOutcome,idUser):Observable<Outcome>{
+		console.log("entro asignar");
+		return this.http.get('http://127.0.0.1:8000/api/changeLeaderOutcome/'+idOutcome+'/'+idUser).map((response:Response)=> response.json());
+	}
 }
