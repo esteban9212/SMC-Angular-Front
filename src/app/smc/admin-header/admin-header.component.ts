@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminHeaderComponent implements OnInit {
 
-  constructor() { }
+	nameUser : string;
 
-  ngOnInit() {
-  }
+	constructor() { }
+
+	ngOnInit() {
+		this.nameUser = localStorage.getItem('name');
+	  	this.nameUser = this.nameUser + " " + localStorage.getItem('last_name');
+	  	this.nameUser.replace(/['"]+/g, '');
+	  }
 
 }

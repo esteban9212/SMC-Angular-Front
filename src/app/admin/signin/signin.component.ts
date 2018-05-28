@@ -21,6 +21,7 @@ export class SigninComponent implements OnInit{
   }
 
   ngOnInit() {
+    this.redirectToHome();
   }
 
   onSignin() {
