@@ -12,9 +12,8 @@ export class AdminHeaderComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() {
-		this.nameUser = localStorage.getItem('name');
-	  	this.nameUser = this.nameUser + " " + localStorage.getItem('last_name');
-	  	this.nameUser.replace(/['"]+/g, '');
+		this.nameUser = localStorage.getItem('name').slice(1, -1);
+	  	this.nameUser = this.nameUser + " " + localStorage.getItem('last_name').slice(1, -1);
 	  }
 
 }

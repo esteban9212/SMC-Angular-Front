@@ -13,10 +13,7 @@ export class AdminLeftSideComponent implements OnInit {
 
   ngOnInit() {
 
-  	this.nameUser = localStorage.getItem('name').toString();
-  	this.nameUser = this.nameUser + " " + localStorage.getItem('last_name');
-  	this.nameUser.replace(/['"]+/g, '');
-
+  	this.nameUser = localStorage.getItem('name').slice(1, -1);
   }
 
 }

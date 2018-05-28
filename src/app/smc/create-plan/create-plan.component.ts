@@ -39,6 +39,8 @@ export class CreatePlanComponent implements OnInit {
 	user1:Observable<User>
 	user:User;
 
+	id_user :any;
+
 
 	plan:Observable<any>; 
 	plan2:any;
@@ -56,24 +58,15 @@ export class CreatePlanComponent implements OnInit {
 
 	ngOnInit(): void {
 	
-  			
+  		var idUser = localStorage.getItem('ID_USER');
+
+  		this.id_user = idUser;
 
 		this.programs= this.programsService.getPrograms();
-		this.user1=this.userService.getUser('007');
 
-		this.user1.subscribe(us=>{
-			this.user=us;
+		console.log(idUser);
 
-	console.log("viene algo dentro susrbi");
-		console.log(this.user);
-		});
-
-
-	console.log("viene algo despues suscribe");
-		console.log(this.user);
-	
-
-		this.roles1=this.userService.getRolsByUser('5000');
+		this.roles1=this.userService.getRolsByUser(idUser);
 		this.roles1.subscribe(rols=>{
 			this.roles2=rols;
 		});
@@ -82,25 +75,19 @@ export class CreatePlanComponent implements OnInit {
 	//		this.idrol=this.roles2[i].ROLE_CIP_ID_ROLE;
 	//	}
 
-	
-	console.log("viene algo");
-		console.log(this.user);
 	}
 
 	onChangeProgram(newValue) {
 		this.programSelected = newValue;
 		this.subCycle =this.programsService.getSubCycleActive(newValue);
 	
-		
-
-		console.log(this.user);
 		for (var i = this.roles2.length - 1; i >= 0; i--) {
 			this.idrol=this.roles2[i].ROLE_CIP_ID_ROLE;
 			console.log(this.idrol);
 
 		
 				if (this.idrol=='1') {
-				this.outcomes= this.outcomeService.outcomesByUserAndProgram(this.user.ID_USER,newValue);
+				this.outcomes= this.outcomeService.outcomesByUserAndProgram(this.id_user,newValue);
 
 				console.log('Outcome Leaderrrrr');
 				}

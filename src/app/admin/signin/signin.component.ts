@@ -3,7 +3,8 @@ import { AuthService } from "../../services/auth.service";
 import { NgForm } from "@angular/forms";
 import { Router } from "@angular/router";
 import { User } from '../../models/user';
-
+import { Observable } from 'rxjs/Rx';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-signin',
@@ -15,8 +16,10 @@ export class SigninComponent implements OnInit{
   userLogin:User;
   tokenData;
   error;
+  user1:Observable<User>
+  user:User;
 
-  constructor(private authService: AuthService, private router: Router) { 
+  constructor(private authService: AuthService, private router: Router,private userService:UserService) { 
     this.userLogin = {'ID_USER':"", 'NAME_USER':'','LAST_NAME':'','EMAIL':'', 'IDENTIFICATION':'', 'LOGIN':'', 'PASSWORD_USER':'', 'STATE_ID_STATE':''};
   }
 
@@ -35,7 +38,18 @@ export class SigninComponent implements OnInit{
 
   redirectToHome(){
     if(this.tokenData != null){
-       this.router.navigate(['/smc/home']);
+      var idUser = localStorage.getItem('user');
+
+      idUser = idUser.slice(1, -1);
+
+      this.user1=this.userService.getUser(idUser);
+
+      this.user1.subscribe(us=>{
+        this.user=us;
+        localStorage.setItem('ID_USER', this.user.ID_USER);
+      });
+
+      this.router.navigate(['/smc/home']);
     }
   }
 
