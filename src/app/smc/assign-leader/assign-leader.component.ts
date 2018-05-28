@@ -145,6 +145,8 @@ export class AssignLeaderComponent implements OnInit {
 		console.log(this.programSelected);
 		console.log(this.outcomeSelected);
 		console.log(this.userId);
+
+     window.location.reload();
 	}
 
   onUserRowSelect(event): void {
