@@ -59,13 +59,21 @@ export class CreatePlanComponent implements OnInit {
   			
 
 		this.programs= this.programsService.getPrograms();
-		this.user1=this.userService.getUser('2813');
+		this.user1=this.userService.getUser('007');
 
 		this.user1.subscribe(us=>{
 			this.user=us;
+
+	console.log("viene algo dentro susrbi");
+		console.log(this.user);
 		});
 
-		this.roles1=this.userService.getRolsByUser('2813');
+
+	console.log("viene algo despues suscribe");
+		console.log(this.user);
+	
+
+		this.roles1=this.userService.getRolsByUser('5000');
 		this.roles1.subscribe(rols=>{
 			this.roles2=rols;
 		});
@@ -75,7 +83,8 @@ export class CreatePlanComponent implements OnInit {
 	//	}
 
 	
-
+	console.log("viene algo");
+		console.log(this.user);
 	}
 
 	onChangeProgram(newValue) {
@@ -87,13 +96,12 @@ export class CreatePlanComponent implements OnInit {
 		console.log(this.user);
 		for (var i = this.roles2.length - 1; i >= 0; i--) {
 			this.idrol=this.roles2[i].ROLE_CIP_ID_ROLE;
+			console.log(this.idrol);
 
-			if (this.idrol=='4') {
-				this.outcomes=null;
-				console.log('Professor');
-			}else{
+		
 				if (this.idrol=='1') {
 				this.outcomes= this.outcomeService.outcomesByUserAndProgram(this.user.ID_USER,newValue);
+
 				console.log('Outcome Leaderrrrr');
 				}
 				
@@ -102,7 +110,7 @@ export class CreatePlanComponent implements OnInit {
 					this.outcomes= this.outcomeService.outcomeByProgram(newValue);
 					console.log('Program Director');
 				}
-			}
+			
 		
 		}
 	
@@ -132,7 +140,7 @@ export class CreatePlanComponent implements OnInit {
 		console.log("outcome1 : " + this.outcomeSelected);
 		console.log("outcomeCycleAs : " + this.OutcomeCycleAs2.ID_OUTCO_CYCLE);
 		console.log("fecha : " + "fecha");
-		console.log("usuario : " + this.user);
+		console.log("usuario : " + this.user.ID_USER);
 		console.log("perido : " + "algo");
 		console.log("estado : " + "draft");
 		console.log("outcome cycle : " + "buscar id");
@@ -147,8 +155,8 @@ export class CreatePlanComponent implements OnInit {
 		this.outcomecambiado.subscribe(prueba=>{
 			this.outcomecambiado2 = prueba;
 		});
-
-
+ window.location.reload();
+    // this.router.navigate(['/smc/create/']);
 
 	}
 

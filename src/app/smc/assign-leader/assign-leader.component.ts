@@ -66,6 +66,8 @@ export class AssignLeaderComponent implements OnInit {
       IdUserCip: {
         title: '#',
         type: 'string',
+        width:'5%', 
+       
       },
       NameUserCip: {
         title: 'Name User',

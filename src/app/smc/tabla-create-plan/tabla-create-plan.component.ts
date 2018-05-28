@@ -40,28 +40,34 @@ export class TablaCreatePlanComponent implements OnInit {
     },
     actions: {
       edit: false, //as an example
-      custom: [{ name: 'goTo', title: '<i class="fas fa-edit"></i>' }]
+      custom: [{ name: 'goTo', title: '<i class="fas fa-edit"></i>' }],
+       width:'5%', 
     },
     columns: {
       Idplan: {
         title: '#',
         type: 'number',
+          width:'5%', 
       },
       Name: {
         title: 'Name Plan',
         type: 'string',
+         width:'15%', 
       },
       Ciclo: {
         title: 'Cycle',
         type: 'string',
+           width:'5%', 
       },
       SubCiclo: {
         title: 'Subcycle',
         type: 'string',
+         width:'5%',      
       },
       Program: {
         title: 'Program',
         type: 'string',
+         width:'15%', 
       },
       Leader: {
         title: 'Leader',
@@ -70,14 +76,17 @@ export class TablaCreatePlanComponent implements OnInit {
       State: {
         title: 'State',
         type: 'number',
+         width:'10%', 
       },
       DateEvaluation: {
         title: 'Evaluation Date',
         type: 'string',
+          width:'10%', 
       },
       Author: {
         title: 'Author',
         type: 'string',
+         width:'10%', 
       },
     },
   };
