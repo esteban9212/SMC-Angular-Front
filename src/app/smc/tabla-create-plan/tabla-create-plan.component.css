@@ -7,3 +7,11 @@
 	    margin-top: 10px;
     background: white;
 }
+
+th.ng2-smart-th.Ciclo {
+    width: auto;
+}
+
+.ng2-smart-table  {
+    min-width: 1500px;
+}

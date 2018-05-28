@@ -62,3 +62,10 @@ section.content-header.titulo {
 form.ng-untouched.ng-pristine.ng-valid {
     margin-bottom: 10px;
 }
+
+div {
+    font-size: small !important;
+}
+table-cell-view-mode {
+    font-size: small !important;
+}

@@ -16,7 +16,8 @@ export class UserService {
 	}
 
 	getUser(idUser):Observable<User>{
-		console.log('http://127.0.0.1:8000/api/userById/'+idUser)
+		console.log("algoooooooooooooooooooo");
+		console.log('http://127.0.0.1:8000/api/userById/'+idUser);
 		return this.http.get('http://127.0.0.1:8000/api/userById/'+idUser).map((response:Response)=> response.json());
 	}
 
