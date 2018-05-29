@@ -98,6 +98,8 @@ newOutcome:Outcome;
 
   ngOnInit() {
 
+    this.isLoggedIn();
+
 
   this.dataObservable = this.userService.getAllUsers();
   	this.dataObservable.subscribe((data)=> {
@@ -166,6 +168,12 @@ window.location.reload();
     this.userName=event.data.NameUserCip;
     this.userId=event.data.IdUserCip;
 }
+
+    isLoggedIn(){
+    if(localStorage.getItem("user") == null){
+      this.router.navigate(['/auth/signin']);
+    }
+  }
 
 
 

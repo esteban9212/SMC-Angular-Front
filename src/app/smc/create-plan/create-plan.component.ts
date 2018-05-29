@@ -57,6 +57,8 @@ export class CreatePlanComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
+
+		this.isLoggedIn();
 	
   		var idUser = localStorage.getItem('ID_USER');
 
@@ -146,6 +148,12 @@ export class CreatePlanComponent implements OnInit {
     // this.router.navigate(['/smc/create/']);
 
 	}
+
+	    isLoggedIn(){
+    if(localStorage.getItem("user") == null){
+      this.router.navigate(['/auth/signin']);
+    }
+  }
 
 
 

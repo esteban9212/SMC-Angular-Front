@@ -365,6 +365,12 @@ export class EditPlanComponent implements OnInit {
     this.selectedDate = "2018-5-1";
     this.model = { date: { year: 2018, month: 5, day: 1 } };
   }
+
+      isLoggedIn(){
+    if(localStorage.getItem("user") == null){
+      this.router.navigate(['/auth/signin']);
+    }
+  }
 }
 
 

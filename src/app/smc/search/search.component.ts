@@ -33,6 +33,8 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
 
+    this.isLoggedIn();
+
 this.route.params
       .subscribe(params => {
         const _id = params['idPlan'].toString();
@@ -55,6 +57,12 @@ this.route.params
     });
 
 			}
+
+            isLoggedIn(){
+    if(localStorage.getItem("user") == null){
+      this.router.navigate(['/auth/signin']);
+    }
+  }
 
 
   }
