@@ -24,6 +24,7 @@ export class SigninComponent implements OnInit{
   }
 
   ngOnInit() {
+    this.isLoggedIn();
     this.redirectToHome();
   }
 
@@ -47,9 +48,8 @@ export class SigninComponent implements OnInit{
       this.user1.subscribe(us=>{
         this.user=us;
         localStorage.setItem('ID_USER', this.user.ID_USER);
+        this.router.navigate(['/smc/home']);
       });
-
-      this.router.navigate(['/smc/home']);
     }
   }
 
@@ -57,6 +57,12 @@ export class SigninComponent implements OnInit{
     console.log(error);
     if(error != null){
       alert("Invalid login or password. Try again");
+    }
+  }
+
+  isLoggedIn(){
+    if(localStorage.getItem("user") != null){
+      this.router.navigate(['/smc/home']);
     }
   }
 
