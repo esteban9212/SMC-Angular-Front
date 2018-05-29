@@ -1,16 +1,21 @@
 <div class="content-wrapper">
 <div>
+  <div class="infoPlan">
    <a href="javascript:history.back()"><i class="fa  fa-arrow-left"></i> <span>Regresar</span></a>
-<h1 class="text-center h1">
-  Editar Plan - PI
-</h1>
+      <h1 class="text-center h1">
+        Editar Plan - PI
+      </h1>
 
+  </div>
+
+<div class="infoPlan">
   <form>
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">Performance Indicator:</label>
       <div class="col-sm-10">
-        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value={{codePi}}>
-        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value={{descriptionPi}}>
+        <ul>
+          <li>{{codePi}} - {{descriptionPi}}</li>
+        </ul>
       </div>
     </div>
     <div class="form-group row">
@@ -35,6 +40,9 @@
     </div>
   </form>
 
+</div>
+
+<div class="infoPlan">
 
   <h3 class="text-center h3">
   Source of Assessment
@@ -46,11 +54,12 @@
 
   <ng2-smart-table [settings]="settings" [source]="source" (custom)="onEdit($event)"></ng2-smart-table>
 </div>
+</div>
 
   <hr>
 
+<div class="infoPlan" *ngIf="checked">
   <div style="margin-left: auto; margin-right: auto; width: 40em" *ngIf="checked">
-    
     <h3 class="text-center h3">
       Edit Source of Assessment
     </h3>
@@ -58,28 +67,36 @@
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">Actual Assessment Source: </label>
       <div class="col-sm-10">
-        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value={{actualAssessmentCourse.NameAssessmentSource}}>
+        <ul>
+          <li>{{actualAssessmentCourse.NameAssessmentSource}}</li>
+        </ul>
       </div>
     </div>
 
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">Actual Assessment Method: </label>
       <div class="col-sm-10">
-        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value={{actualAssessmentCourse.AssessmentMethod}}>
+        <ul>
+          <li>{{actualAssessmentCourse.AssessmentMethod}}</li>
+        </ul>
       </div>
     </div>
 
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">Actual Date of Collection: </label>
       <div class="col-sm-10">
-        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value={{actualAssessmentCourse.DateCollection}}>
+        <ul>
+          <li>{{actualAssessmentCourse.DateCollection}}</li>
+        </ul>
       </div>
     </div>
 
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">Actual Person In Charge: </label>
-      <div class="col-sm-10"> 
-        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value={{actualAssessmentCourse.PersonInCharge}}>
+      <div class="col-sm-10">
+        <ul>
+          <li>{{actualAssessmentCourse.PersonInCharge}}</li>
+        </ul>
       </div>
     </div>
 
@@ -139,11 +156,12 @@
     </div>
   </form>
 
+</div>
   </div>
 
   <hr>
 
-
+<div class="infoPlan" *ngIf="newChecked">
   <div style="margin-left: auto; margin-right: auto; width: 40em" *ngIf="newChecked">
     <h3 class="text-center h3">
       Add Source of Assessment
@@ -206,6 +224,7 @@
 
 
   </div>
+</div>
 </div>
 
 <router-outlet></router-outlet>
