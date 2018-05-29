@@ -29,6 +29,7 @@
 
 .padre{
 	text-align: center;
+    margin-top: 10px;
 }
 
 .boton{
@@ -81,4 +82,8 @@ tr:hover {
 
 section.content-header.titulo {
     margin-top: 0px;
+}
+
+.input-group.mb-3 {
+    width: -webkit-fill-available;
 }
